@@ -1,27 +1,29 @@
 poema = " Eu hoje fiz um samba bem pra frente / Dizendo realmente o que é que eu acho / Eu acho que o meu samba é uma corrente / E coerentemente assino embaixo / Hoje é preciso refletir um pouco / E ver que o samba está tomando jeito / Só mesmo embriagado ou muito louco / Pra contestar e pra botar defeito / Precisa ser muito sincero e claro / Pra confessar que andei sambando errado / Talvez precise até tomar na cara / Pra ver que o samba está bem melhorado / Tem mais é que ser bem cara de tacho / Não ver a multidão sambar contente / Isso me deixa triste e cabisbaixo / Por isso eu fiz um samba bem pra frente / Dizendo realmente o que é que eu acho / Eu acho que o meu samba é uma corrente / E coerentemente assino embaixo / Hoje é preciso refletir um pouco / E ver que o samba está tomando jeito / Só mesmo embriagado ou muito louco / Pra contestar e pra botar defeito / Precisa ser muito sincero e claro / Pra confessar que andei sambando errado / Talvez precise até tomar na cara / Pra ver que o samba está bem melhorado / Tem mais é que ser bem cara de tacho / Não ver a multidão sambar contente / Isso me deixa triste e cabisbaixo"
+lista = [0,0,0,0,0]
+for x in poema:
+    if x == "a" or x == "A":
+        lista[0]=lista[0]+1
+    if x == "e" or x == "E":
+        lista[1]=lista[1]+1
+    if x == "i" or x == "I":
+        lista[2]=lista[2]+1
+    if x == "o" or x == "O":
+        lista[3]=lista[3]+1
+    if x == "u" or x == "U":
+        lista[4]=lista[4]+1
 
-# a)
-# versos = poema.split("/")
-# print(versos[4] + versos[5])
+a=0
+for x in lista:
+    a=a+x
+print("Numero total de vogais: ", a)
 
-# b)
-# versos = poema.split("/")
-# for x in versos:
-#     print(x)
+print("A",lista[0])
+print("E",lista[1])
+print("I",lista[2])
+print("O",lista[3])
+print("U",lista[4])
 
-#     Lixo
-# formatado = poema
-# formatado = formatado.replace(" / ", "\n")
-# print(formatado)
+max_value = max(lista)
+max_index = lista.index(max_value)
+print(max_index)
 
-# c)
-# versos = poema.split("/")
-# versos.append(" Por isso eu fiz um samba bem pra frente ")
-# versos.append(" Dizendo realmente o que é que eu acho ")
-# versos.append(" Isso me deixa triste e cabisbaixo ")
-# for x in versos:
-#       print(x)
-
-# d)
-# print(versos[-2])
-# print(versos[-1])
