@@ -41,11 +41,32 @@ def b(str1, str2):
 
 
 def c(str1, str2,):
-    a = sorted([*str1])
-    lista = []
+    l = []
+    a = [*str1]
+    b= permutation(a)
+    for x in b:
+        k =""
+        for i in x:
+            k += i
+            # print(k)
+        print(k)
 
-    return False
 
+    print(permutation(a))
+
+def permutation(str):
+    if len(str) == 0:
+        return []
+    if len(str) == 1:
+        return [str]
+    l = []
+    for i in range(len(str)):
+        n = str[i]
+
+        remStr = str[:i] + str[i+1:]
+        for x in permutation(remStr):
+            l.append([n] + x)
+    return l
 
 def d(str1, str2):
     start = timer()
@@ -91,5 +112,5 @@ def count_letters(word, char):
 
 str1 = "amor"
 str2 = "roma"
-print(d(str1,str2))
+print(b(str1,str2))
 # print(b(str1,str2))
