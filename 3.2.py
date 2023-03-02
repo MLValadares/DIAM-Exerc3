@@ -33,4 +33,4 @@ indices = [index for index, item in enumerate(lista) if item == max(lista)]
 if len(indices) > 1:
     print("Há vários vencedores")
 for x in indices:
-    print(vogais[x])
+    print("Os vencedores foram: " + vogais[x])
