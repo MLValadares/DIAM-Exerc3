@@ -48,10 +48,48 @@ def c(str1, str2,):
 
 
 def d(str1, str2):
+    start = timer()
+    passos=0
+    letras_1=[]
+    letras_2=[]
+
+    for c in str1:
+        passos+=2
+        count=count_letters(str1,c)
+        letras_1.append((c,count))
+
+    for c in str2:
+        passos+=2
+        count=count_letters(str2,c)
+        letras_2.append((c,count))
+
+    letras_1.sort()
+    letras_2.sort()
+    res1=[*set(letras_1)]
+    res2=[*set(letras_2)]
+    print(res1),print(res2)
+
+    if res1==res2:
+        passos+=5
+        end=timer()
+        print("Tempo final", end - start)
+        print("Número de passos", passos)
+        return True
+
+    passos+=4
+    end=timer()
+    print("Tempo final", end - start)
+    print("Número de passos", passos)
     return False
 
+def count_letters(word, char):
+    count = 0
+    for c in word:
+        if char == c:
+            count += 1
+    return count
 
 str1 = "amor"
 str2 = "roma"
-print(b(str1,str2))
+print(d(str1,str2))
 # print(b(str1,str2))
