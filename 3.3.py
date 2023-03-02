@@ -13,7 +13,7 @@ def bubblesort(a):
                 list[j+1] = temp
     end = timer()
     print(list)
-    print(end - start)
+    print("Tempo final", end - start)
 
 
 def newbubblesort(a):
@@ -27,7 +27,7 @@ def newbubblesort(a):
                 list[j], list[j+1] = list[j+1], list[j]
     end = timer()
     print(list)
-    print(end - start)
+    print("Tempo final", end - start)
 
 
 lista = [54, 26, 93, 17, 77, 31, 44, 55, 20]

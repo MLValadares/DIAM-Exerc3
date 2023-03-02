@@ -19,11 +19,11 @@ for x in lista:
     total = total + x
 print("Número total de vogais: ", total)
 
-print("Vogal A apareceu", lista[0], " vezes")
-print("Vogal E apareceu", lista[1], " vezes")
-print("Vogal I apareceu", lista[2], " vezes")
-print("Vogal O apareceu", lista[3], " vezes")
-print("Vogal U apareceu", lista[4], " vezes")
+print("Vogal A apareceu", lista[0], "vezes")
+print("Vogal E apareceu", lista[1], "vezes")
+print("Vogal I apareceu", lista[2], "vezes")
+print("Vogal O apareceu", lista[3], "vezes")
+print("Vogal U apareceu", lista[4], "vezes")
 
 # max_value = max(lista)
 # max_index = lista.index
@@ -32,5 +32,6 @@ print("Vogal U apareceu", lista[4], " vezes")
 indices = [index for index, item in enumerate(lista) if item == max(lista)]
 if len(indices) > 1:
     print("Há vários vencedores")
+print("Os vencedores foram: ")
 for x in indices:
-    print("Os vencedores foram: " + vogais[x])
+    print(vogais[x])
