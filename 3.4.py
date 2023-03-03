@@ -141,7 +141,7 @@ print("Exerc D")
 print(d(str1,str2))
 print()
 
-# Em termos de passos de execução é difícil dizer, visto que no exerc B usamos um função de sorting próprio do python
-# Em termos de tempo, a solução B parece ser a solução mais rápida.
+# Em termos de passos de execução é difícil dizer, visto que na solução B usamos uma função de sorting próprio do python, mas podemos considerar a solução A
+# Em termos de tempo, a solução B é a solução mais rápida.
 
-# A solução C é a pior porque obriga ao computador a criar tudas as possibilidades, que costa mais quer em tempo, quer em passos de execução
+# A solução C é a pior porque obriga ao computador a criar tudas as possibilidades, que costa mais quer em tempo, quer em passos de execução, em relação as restantes soluções
