@@ -44,21 +44,32 @@ def c(str1, str2,):
     a = [*str1]
     start = timer()
     b = permutation(a)
+    passos = len(str1)
     lista = []
+    # Para estes ciclos for não consediramos como passos, porque consiste apenas na agregação caracteres individuas dentro de lista para uma string
     for x in b:
         k = ""
         for i in x:
             k += i
         lista.append(k)
     for x in lista:
+        passos +=1
         if x == str2:
             end = timer()
             print("Tempo final", end - start)
+            print("Número de passos", passos)
             return True
     end = timer()
     print("Tempo final", end - start)
+    print("Número de passos", passos)
     return False
     # print(permutation(a))
+
+# def permutatio(str):
+#     k = permutation(str, 0)
+#     print("Número de passos", k[1])
+#     return k[0]
+
 
 def permutation(str):
     if len(str) == 0:
@@ -115,8 +126,8 @@ def count_letters(word, char):
             count += 1
     return count
 
-str1 = "amoramor"
-str2 = "romaroma"
+str1 = "amor"
+str2 = "roma"
 print("Exerc A")
 print(a(str1,str2))
 print()
@@ -133,4 +144,4 @@ print()
 # Em termos de passos de execução é difícil dizer, visto que no exerc B usamos um função de sorting próprio do python
 # Em termos de tempo, a solução B parece ser a solução mais rápida.
 
-# A solução C é a pior porque obriga ao computador a criar tudas as possibilidades, que costa quer tempo quer passos de execução
+# A solução C é a pior porque obriga ao computador a criar tudas as possibilidades, que costa mais quer em tempo, quer em passos de execução
