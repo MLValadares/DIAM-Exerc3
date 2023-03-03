@@ -2,22 +2,22 @@ from timeit import default_timer as timer
 
 
 def a(str1, str2):
-    a=[*str1]
-    b=[*str2]
-    x = range(len(str1))
+    a = [*str1]
+    b = [*str2]
+    xa = range(len(str1))
+    xb = range(len(str2))
     start = timer()
     passos = 0
-    for n1 in x:
-        for n2 in x:
+    for n1 in xa:
+        for n2 in xb:
             passos += 1
             if a[n1] == b[n2]:
                 b[n2] = None
                 break
-            # print(b)
     end = timer()
     print("Tempo final", end-start)
     print("Número de passos", passos)
-    # print(b)
+    # Atenção: pode dar True quando o str1 tem mais caracteres que o str2
     for x in b:
         if x is not None:
             return False
@@ -41,22 +41,21 @@ def b(str1, str2):
 
 
 def c(str1, str2,):
-    l = []
     a = [*str1]
     start = timer()
-    b= permutation(a)
+    b = permutation(a)
     lista = []
     for x in b:
-        k =""
+        k = ""
         for i in x:
             k += i
         lista.append(k)
-    # print(lista)
-    end = timer()
     for x in lista:
         if x == str2:
+            end = timer()
             print("Tempo final", end - start)
             return True
+    end = timer()
     print("Tempo final", end - start)
     return False
     # print(permutation(a))
@@ -69,7 +68,6 @@ def permutation(str):
     l = []
     for i in range(len(str)):
         n = str[i]
-
         remStr = str[:i] + str[i+1:]
         for x in permutation(remStr):
             l.append([n] + x)
@@ -117,17 +115,22 @@ def count_letters(word, char):
             count += 1
     return count
 
-str1 = "amor"
-str2 = "roma"
-# print("Exerc A")
-# print(a(str1,str2))
-# print()
-# print("Exerc B")
-# print(b(str1,str2))
-# print()
+str1 = "amoramor"
+str2 = "romaroma"
+print("Exerc A")
+print(a(str1,str2))
+print()
+print("Exerc B")
+print(b(str1,str2))
+print()
 print("Exerc C")
 print(c(str1,str2))
-# print()
-# print("Exerc D")
-# print(d(str1,str2))
-# print()
+print()
+print("Exerc D")
+print(d(str1,str2))
+print()
+
+# Em termos de passos de execução é difícil dizer, visto que no exerc B usamos um função de sorting próprio do python
+# Em termos de tempo, a solução B parece ser a solução mais rápida.
+
+# A solução C é a pior porque obriga ao computador a criar tudas as possibilidades, que costa quer tempo quer passos de execução
