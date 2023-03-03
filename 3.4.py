@@ -12,7 +12,7 @@ def a(str1, str2):
             passos += 1
             if a[n1] == b[n2]:
                 b[n2] = None
-                break;
+                break
             # print(b)
     end = timer()
     print("Tempo final", end-start)
@@ -20,8 +20,8 @@ def a(str1, str2):
     # print(b)
     for x in b:
         if x is not None:
-            return False;
-    return True;
+            return False
+    return True
 
 
 def b(str1, str2):
@@ -43,16 +43,23 @@ def b(str1, str2):
 def c(str1, str2,):
     l = []
     a = [*str1]
+    start = timer()
     b= permutation(a)
+    lista = []
     for x in b:
         k =""
         for i in x:
             k += i
-            # print(k)
-        print(k)
-
-
-    print(permutation(a))
+        lista.append(k)
+    # print(lista)
+    end = timer()
+    for x in lista:
+        if x == str2:
+            print("Tempo final", end - start)
+            return True
+    print("Tempo final", end - start)
+    return False
+    # print(permutation(a))
 
 def permutation(str):
     if len(str) == 0:
@@ -88,7 +95,7 @@ def d(str1, str2):
     letras_2.sort()
     res1=[*set(letras_1)]
     res2=[*set(letras_2)]
-    print(res1),print(res2)
+    # print(res1),print(res2)
 
     if res1==res2:
         passos+=5
@@ -112,5 +119,15 @@ def count_letters(word, char):
 
 str1 = "amor"
 str2 = "roma"
-print(b(str1,str2))
+# print("Exerc A")
+# print(a(str1,str2))
+# print()
+# print("Exerc B")
 # print(b(str1,str2))
+# print()
+print("Exerc C")
+print(c(str1,str2))
+# print()
+# print("Exerc D")
+# print(d(str1,str2))
+# print()
